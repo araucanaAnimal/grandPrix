@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.background-img-prix {
+	background-image: url(../images/grandprix1_fondo.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.black-bkg {
+	background-color: rgba(0, 0, 0, .6);
+	width: 100%;
+	height: 100%;
+}
+
+.papel-picado {
+	background-image: url(../images/papel-picado_2.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100vh;
+	width: 100%;
+	padding-top: 40px;
+}
+
+.logo-signin {
+	margin: auto;
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+}
+
+.btn-ingresar {
+	width: 100%;
+	border: none;
+	border-radius: 0;
+}
+
+.menu-left {
+	width: 20%;
+	float: left;
+}
+
+.contenido {
+	padding-bottom: 70px;
+}
+
+.fullpage-info {
+	display: block;
+	width: 100%;
+}
+
+.inside {
+	height: auto;
+	overflow: hidden;
+}
+
+.pad-top-50 {
+	padding-top: 50px;
+}
+
+.legal2 {
+	font-size: 9px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.escuderia h3 {
+	margin-top: 0 !important;
+	margin-bottom: 5px !important;
+	font-weight: 800 !important;
+	font-size: 42px;
+}
+
+.escuderia h5 {
+	margin-top: 0 !important;
+	margin-bottom: 35px !important;
+	font-size: 20px !important;
+}
+
+.ingresaste {
+	color: #ffffff;
+	font-size: 13px;
+	line-height: 30px;
+	float: left;
+	margin-right: 10px;
+	line-height: 60px;
+}
+
+.logo-int {
+	width: 300px;
+	height: auto;
+}
+
+.nav-sup {
+	padding-top: 10px;
+}
+
+.mar-top-10 {
+	margin-top: 15px;
+}
+
+.ranking {
+	height: 500px;
+	overflow: scroll;
+}
+
+td {
+	text-align: center !important;
+}
+
+.progress .progress-bar.progress-bar-verde {
+    background-color: #4fa54e;
+}
+.progress .progress-bar.progress-bar-verde .ct-progressBar-tr::before {
+    border-color: #4fa54e transparent transparent;
+}
+.progress .progress-bar.progress-bar-verde .ct-progressBar-tr::after {
+    border-color: transparent transparent #20421f;
+}
+.progress .progress-bar.progress-bar-verde .ct-progressBar-tr {
+    background-color: #4fa54e;
+}
+
+.tipsframe {
+	color: #ffffff !important;
+	width: 100%;
+	height: auto;
+	padding: 10px 20px;
+}
+
+.tipsframe h3 {
+	color: #ffffff;
+	font-weight: 800;
+	text-align: center;
+	font-size: 30px;
+}
+.tipsframe h5 {
+	color: #ffffff;
+}
+.tipsframe li {
+	margin-bottom: 10px;
+}
+.tipsframe img {
+	margin: auto;
+}
+.no-background {
+	background-color: rgba(0, 0, 0, 0) !important;
+}
+.puntaje {
+	font-size: 40px;
+	float: left;
+	margin-right: 10px;
+}
+.mar-bot-20 {
+	margin-bottom: 20px;
+}
+
+#categoria7 {
+	height: auto;
+	overflow: hidden;
+}
+
+.catg-popup {
+  position: relative;
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.positiontable {
+	font-size: 11px;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.menu-left {
+		width: 90%;
+		float: none;
+		margin-bottom: 50px;
+	}
+	
+	.logo-int {
+		margin: auto;
+		width: 400px;
+		margin-bottom: 20px;
+	}
+	
+	footer {
+		position: inherit;
+		padding-top: 40px;
+	}
+}
+
+.categ1 {
+	font-weight: 700;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 30px !important;
+}
+
+.logo-v3 {
+	width: 360px;
+	height: auto;
+	margin: auto;
+	margin-bottom: 20px;
+}

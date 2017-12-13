@@ -1,0 +1,61 @@
+// Sliders Inside Media Sections// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.ct-mediaSection{
+  .flexslider, .flexslider .flex-viewport, .flexslider ul.slides{
+    height: 100%;
+  }
+  .flexslider{
+    margin: 0;
+    ul.slides{
+      > li{
+        width: 100%;
+        background-size: cover;
+        -webkit-backface-visibility: visible;
+        display: table !important;
+        .inner{
+          display: table-cell !important;
+          vertical-align: middle;
+        }
+      }
+    }
+    &.ct-flexslider--controlsVertical{
+      .flex-control-nav{
+        right: 20%;
+        top: 50%;
+        left: auto;
+      }
+    }
+  }
+}
+
+@media(min-width: @screen-lg){
+  .boxed .ct-mediaSection .flexslider.ct-flexslider--controlsVertical .flex-control-nav{
+    right: 3%;
+  }
+}
+
+@media(max-width: @screen-md-max){
+  .ct-mediaSection{
+    .flexslider{
+      &.ct-flexslider--controlsVertical{
+        .flex-control-nav{
+          right: 10%;
+        }
+      }
+    }
+  }
+}
+@media(max-width: @screen-xs-max){
+  .ct-mediaSection{
+    .flexslider{
+      ul.slides > li .inner{
+        padding-right: 25px;
+      }
+      &.ct-flexslider--controlsVertical{
+        .flex-control-nav{
+          right: 15px;
+        }
+      }
+    }
+  }
+}
