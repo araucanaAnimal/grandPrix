@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.progress.mini-progress span{
+  color: white !important;
+}
+
 .background-img-prix {
 	background-image: url(../images/grandprix1_fondo.jpg);
 	background-repeat: no-repeat;

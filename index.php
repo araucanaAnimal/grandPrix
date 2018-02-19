@@ -75,6 +75,31 @@ while ( ($data = fgetcsv($handle) ) !== FALSE ) {
         
         "_cv"=>number_format($data[13], 2, ".", ","),
         
+
+	    "_cv1"=>number_format($data[31], 2, ".", ","),
+
+	    "_cv2"=>number_format($data[32], 2, ".", ","),	
+
+	    "_vnn"=>number_format($data[33], 2, ".", ","),
+
+        "_vnr"=>number_format($data[34], 2, ".", ","),
+
+        "_maxVnn"=>number_format($data[35], 2, ".", ","),
+
+        "_maxVnr"=>number_format($data[36], 2, ".", ","),
+
+        "_maxR"=>number_format($data[37], 2, ".", ","),
+
+        "_maxCs"=>number_format($data[38], 2, ".", ","),
+
+        "_maxCvc"=>number_format($data[39], 2, ".", ","),
+
+        "_maxCvv"=>number_format($data[40], 2, ".", ","),
+
+        "_maxSi"=>number_format($data[41], 2, ".", ","),
+
+        "_maxMp"=>number_format($data[42], 2, ".", ","),
+
         "_sv"=>number_format($data[16], 2, ".", ","),
         
         "_mp"=>number_format($data[17], 2, ".", ","), // "Monto Promedio (MAX 10)"

@@ -7827,6 +7827,7 @@ video {
 	width: 200px;
 	overflow: hidden;
 	position: absolute;
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75);
 }
 .progress .progress-bar .ct-progressBar-tr {
   width: 50px;

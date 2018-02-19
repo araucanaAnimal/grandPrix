@@ -112,88 +112,97 @@ border-color: transparent transparent #0b77b5 transparent;
 <div class="col-md-5">
 <img src="assets/images/sucursales/<?php echo $info[$_SESSION["sucursal"]]['i'];?>" alt=""> <!-- cargar imagen segun sucursal -->
 </div>
-<div class="col-md-7 pad-top-50">
+<div class="col-md-7 ">
+
+<!-- Panel Lateral -->
 
 
-<div class="progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['vl']/$info[$_SESSION["sucursal"]]['vt'])*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Ventas <?php echo  $info[$_SESSION["sucursal"]]['vl']."/".$info[$_SESSION["sucursal"]]['vt'];?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
+	<div class="progress">
+        <div class="progress-bar progress-bar-success  progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo ceil((($info[$_SESSION["sucursal"]]['_vnn']+$info[$_SESSION["sucursal"]]['_vnr'])/(($info[$_SESSION["sucursal"]]['_maxVnn']+$info[$_SESSION["sucursal"]]['_maxVnr'])))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text">Ventas &nbsp <?php echo  ($info[$_SESSION["sucursal"]]['_vnn']+$info[$_SESSION["sucursal"]]['_vnr'])."/".($info[$_SESSION["sucursal"]]['_maxVnn']+$info[$_SESSION["sucursal"]]['_maxVnr']);?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
 
-<div class="progress mini-progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['vnn']/$info[$_SESSION["sucursal"]]['vnn_t'])*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Ventas Netas Nuevos <?php echo  $info[$_SESSION["sucursal"]]['vnn']."/".$info[$_SESSION["sucursal"]]['vnn_t'];?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
+    <div class="progress mini-progress">
+        <div class="progress-bar progress-bar-success  progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_vnn']/($info[$_SESSION["sucursal"]]['_maxVnn']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text">Ventas Netas Nuevos &nbsp<?php echo $info[$_SESSION["sucursal"]]['_vnn']."/".$info[$_SESSION["sucursal"]]['_maxVnn'];?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
 
-<div class="progress mini-progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['vnr']/$info[$_SESSION["sucursal"]]['vnr_t'])*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Ventas Netas Renegociados <?php echo  $info[$_SESSION["sucursal"]]['vnr']."/".$info[$_SESSION["sucursal"]]['vnr_t'];?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
+    <div class="progress mini-progress">
+        <div class="progress-bar progress-bar-success  progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_vnr']/($info[$_SESSION["sucursal"]]['_maxVnr']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text">Ventas Netas Renegociados &nbsp<?php echo $info[$_SESSION["sucursal"]]['_vnr']."/".$info[$_SESSION["sucursal"]]['_maxVnr'];?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
 
-<div class="progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['ril']/$info[$_SESSION["sucursal"]]['rit'])*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Riesgo <?php echo  $info[$_SESSION["sucursal"]]['ril']."/".$info[$_SESSION["sucursal"]]['rit'];?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
-<div class="progress mini-progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_r']/10)*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Reprogramaciones <?php echo $info[$_SESSION["sucursal"]]['_r']."/10.00";?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
-<div class="progress mini-progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_cc']/7)*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Cruce Cesantía <?php echo $info[$_SESSION["sucursal"]]['_cc']."/7.00";?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success  progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo ceil((($info[$_SESSION["sucursal"]]['_cv1']+$info[$_SESSION["sucursal"]]['_cv2']+$info[$_SESSION["sucursal"]]['_r']+$info[$_SESSION["sucursal"]]['_cc'])/($info[$_SESSION["sucursal"]]['_maxR']+$info[$_SESSION["sucursal"]]['_maxCs']+$info[$_SESSION["sucursal"]]['_maxCvc']+$info[$_SESSION["sucursal"]]['_maxCvv']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text">Riesgo &nbsp <?php echo  ($info[$_SESSION["sucursal"]]['_cv1']+$info[$_SESSION["sucursal"]]['_cv2']+$info[$_SESSION["sucursal"]]['_r']+$info[$_SESSION["sucursal"]]['_cc'])."/".($info[$_SESSION["sucursal"]]['_maxR']+$info[$_SESSION["sucursal"]]['_maxCs']+$info[$_SESSION["sucursal"]]['_maxCvc']+$info[$_SESSION["sucursal"]]['_maxCvv']);?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
 
-<div class="progress mini-progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['scc']/$info[$_SESSION["sucursal"]]['scc_t'])*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Seguro Cesantía con Cobertura <?php echo  $info[$_SESSION["sucursal"]]['scc']."/".$info[$_SESSION["sucursal"]]['scc_t'];?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
 
-<div class="progress mini-progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_cv']/22)*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Calidad de Venta <?php echo $info[$_SESSION["sucursal"]]['_cv']."/22.00";?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
-<div class="progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['rel']/$info[$_SESSION["sucursal"]]['ret'])*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Rentabilidad <?php echo $info[$_SESSION["sucursal"]]['rel']."/".$info[$_SESSION["sucursal"]]['ret'];?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
-<div class="progress mini-progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_sv']/5)*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Seguros Voluntarios <?php echo $info[$_SESSION["sucursal"]]['_sv']."/5.00";?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
-<div class="progress mini-progress">
-<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_mp']/10)*100);?>" aria-valuemin="0" aria-valuemax="100">
-<span class="ct-progressBar-text">Monto Promedio <?php echo $info[$_SESSION["sucursal"]]['_mp']."/10.00";?></span>
-<div class="ct-progressBar-tr"></div>
-</div>
-</div>
+   <div class="progress mini-progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+        aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_r']/($info[$_SESSION["sucursal"]]['_maxR']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text">Reprogramaciones &nbsp<?php echo $info[$_SESSION["sucursal"]]['_r']."/".$info[$_SESSION["sucursal"]]['_maxR'];?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
+
+    <div class="progress mini-progress">
+        <div class="progress-bar progress-bar-success  progress-bar-striped active" role="progressbar"
+        aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_cc']/($info[$_SESSION["sucursal"]]['_maxCs']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text">Cruce Cesantía &nbsp<?php echo $info[$_SESSION["sucursal"]]['_cc']."/".$info[$_SESSION["sucursal"]]['_maxCs'];?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
+
+    <div class="progress mini-progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+        aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_cv1']/($info[$_SESSION["sucursal"]]['_maxCvc']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text">Calidad de Venta Color &nbsp<?php echo $info[$_SESSION["sucursal"]]['_cv1']."/".$info[$_SESSION["sucursal"]]['_maxCvc'];?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
+
+    <div class="progress mini-progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+        aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_cv2']/($info[$_SESSION["sucursal"]]['_maxCvv']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text" style="color: white">Calidad de Venta Vintage  &nbsp<?php echo $info[$_SESSION["sucursal"]]['_cv2']."/".$info[$_SESSION["sucursal"]]['_maxCvv'];?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+        aria-valuenow="<?php echo ceil((($info[$_SESSION["sucursal"]]['_sv']+$info[$_SESSION["sucursal"]]['_mp'])/($info[$_SESSION["sucursal"]]['_maxSi']+$info[$_SESSION["sucursal"]]['_maxMp']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text">Rentabilidad &nbsp<?php echo /*$re*/ $info[$_SESSION["sucursal"]]['rel']."/".($info[$_SESSION["sucursal"]]['_maxSi']+$info[$_SESSION["sucursal"]]['_maxMp']);?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
+    <div class="progress mini-progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+        aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_sv']/($info[$_SESSION["sucursal"]]['_maxSi']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text" style="color: white;">Seguros Individuales &nbsp<?php echo $info[$_SESSION["sucursal"]]['_sv']."/".$info[$_SESSION["sucursal"]]['_maxSi'];?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
+    <div class="progress mini-progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+        aria-valuenow="<?php echo ceil(($info[$_SESSION["sucursal"]]['_mp']/($info[$_SESSION["sucursal"]]['_maxMp']))*100);?>" aria-valuemin="0" aria-valuemax="100">
+            <span class="ct-progressBar-text">Monto Promedio &nbsp<?php echo $info[$_SESSION["sucursal"]]['_mp']."/".$info[$_SESSION["sucursal"]]['_maxMp'];?></span>
+            <div class="ct-progressBar-tr"></div>
+        </div>
+    </div>
+
+
+
+
 </div>
 </div>
 <div class="tab-pane fade ranking" id="ranking7">
@@ -387,7 +396,7 @@ echo'<tr><td>'.$p.'</td><td>'.$info[$_k]['s'].'</td><td>'.$_v.'</td></tr>';
 </thead>
 <tbody><?php
 $pos = 1;$lp = NULL;$tp = 1;$p=0;
-foreach($ranking_final['verde'] as $_k=>$_v){
+foreach($ranking_final['success'] as $_k=>$_v){
 
 if($lp == NULL){
 $lp = $_v;
