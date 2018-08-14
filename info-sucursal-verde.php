@@ -337,10 +337,6 @@ $tp++;
 $p++;
 echo'<tr><td>'.$p/*$pos*/.'</td><td>'.$info[$_k]['s'].'</td><td>'.$_v.'</td></tr>';
 }?>
-/*
-echo'<tr><td>'.$pos.'</td><td>'.$info[$_k]['s'].'</td><td>'.$_v.'</td></tr>';
-}
-*/?>
 </tbody>
 </table>
 </div>
@@ -478,7 +474,7 @@ echo'<tr><td>'.$p.'</td><td>'.$info[$_k]['s'].'</td><td>'.$_v.'</td></tr>';
 <iframe src="tips.html" width="100%" height="400" style="overflow: scroll; border: none;"></iframe>
 </div>
 <div class="tab-pane fade" id="galeria7">
-<iframe src="bases.html" width="100%" height="600" style="overflow: scroll; border: none;"></iframe>
+<iframe src="galeriaHome.html" width="100%" height="600" style="overflow: scroll; border: none;"></iframe>
 </div>
 </div>
 </div>

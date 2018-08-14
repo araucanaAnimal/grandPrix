@@ -396,7 +396,7 @@ echo'<tr><td>'.$p.'</td><td>'.$info[$_k]['s'].'</td><td>'.$_v.'</td></tr>';
 </thead>
 <tbody><?php
 $pos = 1;$lp = NULL;$tp = 1;$p=0;
-foreach($ranking_final['success'] as $_k=>$_v){
+foreach($ranking_final['verde'] as $_k=>$_v){
 
 if($lp == NULL){
 $lp = $_v;
@@ -482,7 +482,7 @@ echo'<tr><td>'.$p.'</td><td>'.$info[$_k]['s'].'</td><td>'.$_v.'</td></tr>';
 <iframe src="tips.html" width="100%" height="400" style="overflow: scroll; border: none;"></iframe>
 </div>
 <div class="tab-pane fade" id="galeria7">
-<iframe src="bases.html" width="100%" height="600" style="overflow: scroll; border: none;"></iframe>
+<iframe src="galeriaHome.html" width="100%" height="600" style="overflow: scroll; border: none;"></iframe>
 </div>
 </div>
 </div>

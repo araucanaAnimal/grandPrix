@@ -405,42 +405,37 @@ echo'<tr>
 			</div>
            
            	<div id="catg3" class="catg-popup mfp-hide">
-            	<div class="col-md-12">
-              		<h4 class="categ1">Categoría Nascar</h4>
-             		<!--
-              		<img class="img-responsive" style="margin: 15px auto;" src="assets/images/ranking_general.png" alt="ranking general" width="300">
-              		-->
+                <div class="col-md-12">
+                <h4 class="categ1">Categoría Nascar</h4>
                 </div>
- 		 		<div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th># Posición</th>
-                            <th>Piloto</th>
-                            <th>Puntaje</th>
-                        </tr>
-                        </thead>
-                        <tbody><?php
-                        $pos = 1;$lp = NULL;$tp = 1;
-                        foreach($ranking_final['warning'] as $_k=>$_v){
+                <div class="table-responsive">
+                <table class="table table-striped">
+                <thead>
+                <tr>
+                <th># Posición</th>
+                <th>Piloto</th>
+                <th>Puntaje</th>
+                </tr>
+                </thead>
+                <tbody><?php
+                $pos = 1;$lp = NULL;$tp = 1;$p=0;
+                foreach($ranking_final['verde'] as $_k=>$_v){
 
-
-                            if($lp == NULL){
-                                $lp = $_v;
-                            }
-
-                            if($_v != $lp){
-                                $lp = $_v;
-                                $pos = $tp;
-                            }
-                            $tp++;
-
-                            echo'<tr><td>'.$pos.'</td><td>'.$info[$_k]['s'].'</td><td>'.$_v.'</td></tr>';
-                        }?>
-                        </tbody>
-                    </table>
+                if($lp == NULL){
+                $lp = $_v;
+                }
+                if($_v != $lp){
+                $lp = $_v;
+                $pos = $tp;
+                }
+                $tp++;
+                $p++;
+                echo'<tr><td>'.$p.'</td><td>'.$info[$_k]['s'].'</td><td>'.$_v.'</td></tr>';
+                }?>
+                </tbody>
+                </table>
                 </div>
-			</div>
+                </div>
            
            	<div id="catg4" class="catg-popup mfp-hide">
             	<div class="col-md-12">
@@ -523,7 +518,7 @@ echo'<tr>
             	<iframe src="tips.html" width="100%" height="400" style="overflow: scroll; border: none;"></iframe>
             </div>
             <div class="tab-pane fade" id="galeria7">
-            	<iframe src="bases.html" width="100%" height="600" style="overflow: scroll; border: none;"></iframe>
+            	<iframe src="galeriaHome.html" width="100%" height="600" style="overflow: scroll; border: none;"></iframe>
             </div>
         </div>
     </div>

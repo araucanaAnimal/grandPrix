@@ -6,7 +6,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 */
 //define("DRIVE",'https://docs.google.com/spreadsheets/d/e/2PACX-1vTtlksIYy3LvIieuZgJNxnFYdJz9VIBDR1IBdovGqaBaPKXaqwLizfhnwbmhKvppEwUktSWyiHvrQKN/pub?gid=0&single=true&output=csv');
-define("DRIVE", 'https://docs.google.com/spreadsheets/d/1HUTuAtDL5D8RiUeO5ZXME5Z6YrRzRBCm42FQhbn5P6o/pub?gid=0&single=true&output=csv');
+//define("DRIVE", 'https://docs.google.com/spreadsheets/d/1HUTuAtDL5D8RiUeO5ZXME5Z6YrRzRBCm42FQhbn5P6o/pub?gid=0&single=true&output=csv');
+define("DRIVE", 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQGbJtScYxPxPk-fXPpcQiNSyye1xPzQ0-LLQnvIrY5yAtSKmuBwJGnEEieAaE6oN7DVPdBQiGqyWIw/pub?gid=1414031067&single=true&output=csv');
+
 define('TARGET','index.php');
 ini_set('auto_detect_line_endings',TRUE);
 
@@ -66,7 +68,7 @@ while ( ($data = fgetcsv($handle) ) !== FALSE ) {
         "ril"=>($data[27]>0)?number_format(($data[11]+$data[12]+$data[13]+$data[27]), 2, ".", ","):number_format(($data[11]+$data[12]+$data[13]), 2, ".", ","),
         "rit"=>number_format($data[10], 2, ".", ","), //($data[26]>0)?($data[10]+$data[26]):($data[10]),
         
-        "p"=>number_format(($data[11]+$data[12]+$data[13]+$data[16]+$data[17]+$data[8]), 2, ".", ","),
+        "p"=>number_format(($data[33]+$data[34]+$data[16]+$data[17]+$data[31]+$data[32]+$data[11]+$data[12]), 2, ".", ","),
         "t"=>$data[4],
         
         "_r"=>number_format($data[11], 2, ".", ","),
